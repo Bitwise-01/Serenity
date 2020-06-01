@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+        <link
+            rel="stylesheet"
+            href="{{ url_for('static', filename='vendor/bootstrap-4.5.0-dist/css/bootstrap.min.css') }}"
+        />
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}" />
+        <title>Serenity</title>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col alert-warning rounded">
+                    <h5>Warning</h5>
+                    <p class="" style="font-size: 12px;">
+                        Serenity is made for you to express yourself; nothing actually happens when you
+                        press send. And nothing you type leaves your device.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-10 mt-4 pt-4 mx-auto">
+                    <div class="email-container">
+                        <!-- Header -->
+                        <div class="row">
+                            <div class="col">
+                                <div class="header-container">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend bg-primary">
+                                            <span class="input-group-text bg-primary text-white">To</span>
+                                        </div>
+                                        <input
+                                            id="target"
+                                            type="text"
+                                            class="form-control input-section"
+                                            placeholder="Email, Phone, or Name"
+                                        />
+                                    </div>
+
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text bg-primary text-white"
+                                                >Subject</span
+                                            >
+                                        </div>
+                                        <input
+                                            type="text"
+                                            class="form-control input-section"
+                                            placeholder="Thanks"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Body -->
+                        <div class="row">
+                            <div class="col">
+                                <div id="editor" contenteditable="true" data-gramm_editor="false"></div>
+                            </div>
+                        </div>
+
+                        <!-- Footer -->
+                        <div class="row">
+                            <div class="col">
+                                <div class="btn-container pr-md-2">
+                                    <div class="row">
+                                        <div class="col text-right">
+                                            <button class="btn btn-primary rounded" id="btn-send">
+                                                Send E-mail
+                                            </button>
+                                            <div
+                                                class="spinner-border text-primary"
+                                                id="loader"
+                                                hidden
+                                            ></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="{{ url_for('static', filename='vendor/jquery-3.5.1.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='vendor/popper.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='vendor/bootstrap-4.5.0-dist/js/bootstrap.min.js') }}"></script>
+
+        <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+    </body>
+</html>
